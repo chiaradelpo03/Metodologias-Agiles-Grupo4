@@ -1,3 +1,17 @@
 import './style.css';
+import { Ahorcado } from './domain/Ahorcado';
 
-console.log('Ahorcado app inicializada.');
+function iniciarAplicacion() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const palabra = urlParams.get('palabra') || 'AHORCADO';
+
+  const juego = new Ahorcado(palabra);
+
+  const palabraOcultaEl = document.getElementById('palabra-oculta');
+  if (palabraOcultaEl) {
+    palabraOcultaEl.textContent = juego.obtenerPalabraEnmascarada();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', iniciarAplicacion);
+iniciarAplicacion();
