@@ -9,7 +9,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 
 | Integrante | GitHub Username | Email en Git | Commits RED iniciados |
 |------------|-----------------|--------------|-----------------------|
-| Integrante 1 | | | 0 |
+| Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 1 (en progreso) |
 | Integrante 2 | | | 0 |
 | Integrante 3 | | | 0 |
 | Integrante 4 | | | 0 |
@@ -28,10 +28,10 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 
 | ID Historia | Título / Criterio de Aceptación | Acceptance Test (Gherkin / Feature) | Unit Tests de Dominio (TDD) | Responsable (Autor RED) | Estado |
 |-------------|---------------------------------|--------------------------------------|-----------------------------|--------------------------|--------|
-| **HU-01** | Iniciar juego con palabra oculta | `features/HU-01_iniciar_juego.feature` | *Lista de tests de dominio* | *Por definir* | Pendiente |
-| **HU-02** | Arriesgar letra acertada | `features/HU-02_arriesgar_letra_correcta.feature` | *Lista de tests de dominio* | *Por definir* | Pendiente |
-| **HU-03** | Arriesgar letra errónea y descontar intentos | `features/HU-03_arriesgar_letra_incorrecta.feature` | *Lista de tests de dominio* | *Por definir* | Pendiente |
-| **HU-04** | Ganar / Perder partida | `features/HU-04_fin_de_partida.feature` | *Lista de tests de dominio* | *Por definir* | Pendiente |
+| **HU-01** | Mostrar guiones según la palabra secreta | `features/HU-01_palabra_oculta.feature` | *src/domain/Ahorcado.test.ts* | Tomás Gigli (tomiingm) | En progreso (RED ATDD) |
+| **HU-02** | Arriesgar letra acertada | `features/HU-02_arriesgar_letra_correcta.feature` | *Por definir* | *Por definir* | Pendiente |
+| **HU-03** | Arriesgar letra errónea y descontar intentos | `features/HU-03_arriesgar_letra_incorrecta.feature` | *Por definir* | *Por definir* | Pendiente |
+| **HU-04** | Ganar / Perder partida | `features/HU-04_fin_de_partida.feature` | *Por definir* | *Por definir* | Pendiente |
 
 ---
 
