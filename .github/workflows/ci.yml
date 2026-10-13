@@ -1,0 +1,36 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: 1. Compilación / Build
+        run: npm run build
+
+      - name: 2 & 3. Unit Tests y Code Coverage (Dominio >= 90%)
+        run: npm run test:coverage
+
+      - name: Instalar navegadores de Playwright
+        run: npx playwright install --with-deps chromium
+
+      - name: 5. Acceptance Tests (ATDD / BDD)
+        run: npm run test:at

@@ -1,0 +1,29 @@
+# Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# Build y distribución
+dist/
+dist-ssr/
+build/
+
+# Reportes y temporales de testing
+coverage/
+*.lcov
+test-results/
+playwright-report/
+blob-report/
+.features-gen/
+
+# Logs y entornos
+*.log
+.env
+.env.local
+.env.*.local
+
+# IDEs y SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
