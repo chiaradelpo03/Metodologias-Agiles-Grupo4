@@ -2,10 +2,10 @@ export class Ahorcado {
   private palabraSecreta: string;
 
   constructor(palabra: string) {
-    this.palabraSecreta = palabra;
+    this.palabraSecreta = palabra.trim().toUpperCase();
   }
 
   obtenerPalabraEnmascarada(): string {
-    return '';
+    return Array.from({ length: this.palabraSecreta.length }, () => '_').join(' ');
   }
 }
