@@ -10,7 +10,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | Integrante | GitHub Username | Email en Git | Commits RED iniciados |
 |------------|-----------------|--------------|-----------------------|
 | Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 2 (completados con GREEN) |
-| Integrante 2 | | | 0 |
+| Isabella Andriollo | isabellaand | isabellaandriollo30@gmail.com | 3 (HU-02, completados con GREEN) |
 | Integrante 3 | | | 0 |
 | Integrante 4 | | | 0 |
 
@@ -29,7 +29,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | ID Historia | Título / Criterio de Aceptación | Acceptance Test (Gherkin / Feature) | Unit Tests de Dominio (TDD) | Responsable (Autor RED) | Estado |
 |-------------|---------------------------------|--------------------------------------|-----------------------------|--------------------------|--------|
 | **HU-01** | Mostrar guiones según la palabra secreta | `features/HU-01_palabra_oculta.feature` | `src/domain/Ahorcado.test.ts` (enmascarado inicial) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
-| **HU-02** | Arriesgar letra acertada | `features/HU-02_arriesgar_letra_correcta.feature` | *Por definir* | *Por definir* | Pendiente |
+| **HU-02** | Arriesgar letra acertada | `features/HU-02_arriesgar_letra_acertada.feature` | `tests/Ahorcado.test.ts` (letra acertada) | Isabella Andriollo (isabellaand) | Terminada (AT y UT verdes) |
 | **HU-03** | Arriesgar letra errónea y descontar intentos | `features/HU-03_arriesgar_letra_incorrecta.feature` | *Por definir* | *Por definir* | Pendiente |
 | **HU-04** | Ganar / Perder partida | `features/HU-04_fin_de_partida.feature` | *Por definir* | *Por definir* | Pendiente |
 

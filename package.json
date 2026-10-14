@@ -10,7 +10,7 @@
     "test:unit": "vitest run",
     "test:coverage": "vitest run --coverage",
     "bdd:gen": "bddgen",
-    "test:at": "bddgen && playwright test --pass-with-no-tests"
+    "test:at": "bddgen && playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.49.0",

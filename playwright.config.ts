@@ -8,7 +8,6 @@ const testDir = defineBddConfig({
 
 export default defineConfig({
   testDir,
-  passWithNoTests: true,
   reporter: [['html', { open: 'never' }], ['list']],
   use: {
     baseURL: 'http://localhost:3000',
