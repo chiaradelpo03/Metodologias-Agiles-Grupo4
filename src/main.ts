@@ -11,6 +11,17 @@ function iniciarAplicacion() {
   if (palabraOcultaEl) {
     palabraOcultaEl.textContent = juego.obtenerPalabraEnmascarada();
   }
+
+  const formulario = document.getElementById('formulario-letra') as HTMLFormElement;
+  const inputLetra = document.getElementById('letra') as HTMLInputElement;
+
+  formulario.onsubmit = (evento) => {
+    evento.preventDefault();
+    juego.adivinar(inputLetra.value);
+    if (palabraOcultaEl) {
+      palabraOcultaEl.textContent = juego.obtenerPalabraEnmascarada();
+    }
+  };
 }
 
 document.addEventListener('DOMContentLoaded', iniciarAplicacion);
