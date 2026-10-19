@@ -6,13 +6,25 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: false
+
 jobs:
-  build-and-test:
+  pipeline:
+    name: CI Pipeline (Etapas 1 a 5)
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout del código
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
@@ -23,14 +35,48 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: 1. Compilación / Build
+      - name: 1. Compila / Build
         run: npm run build
 
-      - name: 2 & 3. Unit Tests y Code Coverage (Dominio >= 90%)
+      - name: 2. Unit Tests
+        run: npm run test:unit
+
+      - name: 3. Code Coverage (Dominio >= 90%)
         run: npm run test:coverage
+
+      - name: 4.1 Análisis Estático (SonarQube Cloud)
+        uses: SonarSource/sonarqube-scan-action@v5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+      - name: 4.2 Quality Gate (SonarQube)
+        uses: SonarSource/sonarqube-quality-gate-action@v1.1.0
+        # continue-on-error ausente (falla si el gate no pasa, según Consigna §3.7)
+        timeout-minutes: 5
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Instalar navegadores de Playwright
         run: npx playwright install --with-deps chromium
 
       - name: 5. Acceptance Tests (ATDD / BDD)
         run: npm run test:at
+
+      - name: Preparar artefacto para Deploy
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+
+  deploy:
+    name: 6. Deploy a Producción
+    needs: [pipeline]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Desplegar aplicación a GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
