@@ -9,4 +9,12 @@ describe('Ahorcado', () => {
 
     expect(juego.obtenerPalabraEnmascarada()).toBe('_ A _ _');
   });
+
+  it('muestra todas las apariciones de una letra acertada', () => {
+    const juego = new Ahorcado('PERRO');
+
+    juego.adivinar('R');
+
+    expect(juego.obtenerPalabraEnmascarada()).toBe('_ _ R R _');
+  });
 });

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { Ahorcado } from './Ahorcado';
+import { Ahorcado } from '../src/domain/Ahorcado';
 
 describe('Ahorcado - Dominio', () => {
   it('debería mostrar un guión por cada letra separada por espacios al iniciar', () => {
