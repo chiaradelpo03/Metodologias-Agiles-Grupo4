@@ -13,10 +13,10 @@ Aplicación web del juego del Ahorcado construida siguiendo las prácticas técn
 ---
 
 ## 🔗 Enlaces Importantes
-- **Producción (Deploy continuo)**: *[URL pública de la app]*
+- **Producción (Deploy continuo)**: [https://chiaradelpo03.github.io/Metodologias-Agiles-Grupo4/](https://chiaradelpo03.github.io/Metodologias-Agiles-Grupo4/)
 - **Tablero / Story Map**: *[Link a GitHub Projects o tablero del grupo]*
 - **Última corrida de CI/CD**: [GitHub Actions](../../actions)
-- **Análisis de Calidad (SonarQube Cloud)**: *[Link al dashboard público]*
+- **Análisis de Calidad (SonarQube Cloud)**: [https://sonarcloud.io/project/overview?id=lusosa280_Metodologias-Agiles-Grupo4](https://sonarcloud.io/project/overview?id=lusosa280_Metodologias-Agiles-Grupo4)
 
 ---
 
