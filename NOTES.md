@@ -11,8 +11,8 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 |------------|-----------------|--------------|-----------------------|
 | Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 2 (completados con GREEN) |
 | Isabella Andriollo | isabellaand | isabellaandriollo30@gmail.com | 3 (HU-02, completados con GREEN) |
-| Integrante 3 | | | 0 |
-| Integrante 4 | | | 0 |
+| Luis Sosa | lusosa280 | luis.ant.sosa@gmail.com | 3 (HU-03, completados con GREEN) |
+| Chiara Del Po | chiaradelpo03 | chiaradelpo@gmail.com | 0 |
 
 ---
 
@@ -30,7 +30,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 |-------------|---------------------------------|--------------------------------------|-----------------------------|--------------------------|--------|
 | **HU-01** | Mostrar guiones según la palabra secreta | `features/HU-01_palabra_oculta.feature` | `src/domain/Ahorcado.test.ts` (enmascarado inicial) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
 | **HU-02** | Arriesgar letra acertada | `features/HU-02_arriesgar_letra_acertada.feature` | `tests/Ahorcado.test.ts` (letra acertada) | Isabella Andriollo (isabellaand) | Terminada (AT y UT verdes) |
-| **HU-03** | Arriesgar letra errónea y descontar intentos | `features/HU-03_arriesgar_letra_incorrecta.feature` | *Por definir* | *Por definir* | Pendiente |
+| **HU-03** | Arriesgar letra errónea y descontar intentos | `features/HU-03_arriesgar_letra_incorrecta.feature` | `tests/Ahorcado.test.ts` (descontar intentos y triangulación) | Luis Sosa (lusosa280) | Terminada (AT y UT verdes) |
 | **HU-04** | Ganar / Perder partida | `features/HU-04_fin_de_partida.feature` | *Por definir* | *Por definir* | Pendiente |
 
 ---
@@ -48,3 +48,16 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
   4. Conectar el dominio con la UI en `src/ui/`.
   5. El Acceptance Test pasa (`GREEN:`).
 - **Higiene de rama principal**: No se pushea a `main` con tests en rojo ni con cobertura menor al 90%.
+
+---
+
+## 5. Registro de Ajustes y Lecciones Aprendidas (Feedback Docente)
+- **Triangulación rigurosa y Fake It**:
+  1. Primer test en `RED:` que expone la nueva necesidad.
+  2. Paso a `GREEN:` con la solución mínima o hardcodeada (*Fake It*).
+  3. Segundo test en `RED:` con un caso distinto que invalida la solución fake (triangulación real).
+  4. Paso a `GREEN:` generalizando la lógica de dominio.
+  5. Opcional: `REFACTOR:` si requiere limpieza de diseño.
+- **Higiene de Commits**:
+  - Un test nuevo **nunca** se clasifica como `REFACTOR:`, sino siempre como `RED:`. Los refactors solo reorganizan código existente sin alterar pruebas ni comportamiento.
+
