@@ -1,9 +1,11 @@
 export class Ahorcado {
   private palabraSecreta: string;
   private letrasAdivinadas = new Set<string>();
+  private intentosRestantes: number;
 
-  constructor(palabra: string) {
+  constructor(palabra: string, intentosMaximos = 6) {
     this.palabraSecreta = palabra.trim().toUpperCase();
+    this.intentosRestantes = intentosMaximos;
   }
 
   obtenerPalabraEnmascarada(): string {
@@ -13,11 +15,15 @@ export class Ahorcado {
   }
 
   adivinar(letra: string): void {
-    this.letrasAdivinadas.add(letra.toUpperCase());
+    const letraMayuscula = letra.toUpperCase();
+    if (!this.palabraSecreta.includes(letraMayuscula)) {
+      this.intentosRestantes--;
+    }
+    this.letrasAdivinadas.add(letraMayuscula);
   }
 
   obtenerIntentosRestantes(): number {
-    return 5;
+    return this.intentosRestantes;
   }
 }
 
