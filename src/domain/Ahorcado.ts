@@ -15,4 +15,9 @@ export class Ahorcado {
   adivinar(letra: string): void {
     this.letrasAdivinadas.add(letra.toUpperCase());
   }
+
+  obtenerIntentosRestantes(): number {
+    return 5;
+  }
 }
+
