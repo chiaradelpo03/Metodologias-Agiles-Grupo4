@@ -25,5 +25,14 @@ describe('Ahorcado', () => {
 
     expect(juego.obtenerIntentosRestantes()).toBe(5);
   });
+
+  it('no descuenta intentos si la letra arriesgada pertenece a la palabra', () => {
+    const juego = new Ahorcado('GATO');
+
+    juego.adivinar('A');
+
+    expect(juego.obtenerIntentosRestantes()).toBe(6);
+  });
 });
+
 
