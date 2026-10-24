@@ -12,3 +12,8 @@ When('arriesgo la letra {string}', async ({ page }, letra: string) => {
 Then('debería ver la palabra {string}', async ({ page }, palabra: string) => {
   await expect(page.locator('#palabra-oculta')).toHaveText(palabra);
 });
+
+Then('debería ver que me quedan {int} intentos', async ({ page }, intentos: number) => {
+  await expect(page.locator('#intentos-restantes')).toHaveText(intentos.toString());
+});
+
