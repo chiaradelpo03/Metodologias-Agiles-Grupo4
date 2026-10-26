@@ -18,8 +18,12 @@ function iniciarAplicacion() {
     if (intentosRestantesEl) {
       intentosRestantesEl.textContent = juego.obtenerIntentosRestantes().toString();
     }
-    if (estadoJuegoEl && juego.estaGanado()) {
-      estadoJuegoEl.textContent = '¡Ganaste!';
+    if (estadoJuegoEl) {
+      if (juego.estaGanado()) {
+        estadoJuegoEl.textContent = '¡Ganaste!';
+      } else if (juego.estaPerdido()) {
+        estadoJuegoEl.textContent = '¡Perdiste!';
+      }
     }
   };
 
