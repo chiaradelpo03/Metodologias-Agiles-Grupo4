@@ -64,7 +64,16 @@ describe('Ahorcado', () => {
 
     expect(juego.estaPerdido()).toBe(true);
   });
+
+  it('no considera perdida la partida si todavía quedan intentos', () => {
+    const juego = new Ahorcado('SOL');
+
+    juego.adivinar('A');
+
+    expect(juego.estaPerdido()).toBe(false);
+  });
 });
+
 
 
 
