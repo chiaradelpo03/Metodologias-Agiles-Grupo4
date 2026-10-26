@@ -9,7 +9,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 
 | Integrante | GitHub Username | Email en Git | Commits RED iniciados |
 |------------|-----------------|--------------|-----------------------|
-| Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 2 (completados con GREEN) |
+| Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 5 (HU-01 y HU-04, completados con GREEN) |
 | Isabella Andriollo | isabellaand | isabellaandriollo30@gmail.com | 3 (HU-02, completados con GREEN) |
 | Luis Sosa | lusosa280 | luis.ant.sosa@gmail.com | 3 (HU-03, completados con GREEN) |
 | Chiara Del Po | chiaradelpo03 | chiaradelpo@gmail.com | 0 |
@@ -31,7 +31,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | **HU-01** | Mostrar guiones según la palabra secreta | `features/HU-01_palabra_oculta.feature` | `src/domain/Ahorcado.test.ts` (enmascarado inicial) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
 | **HU-02** | Arriesgar letra acertada | `features/HU-02_arriesgar_letra_acertada.feature` | `tests/Ahorcado.test.ts` (letra acertada) | Isabella Andriollo (isabellaand) | Terminada (AT y UT verdes) |
 | **HU-03** | Arriesgar letra errónea y descontar intentos | `features/HU-03_arriesgar_letra_incorrecta.feature` | `tests/Ahorcado.test.ts` (descontar intentos y triangulación) | Luis Sosa (lusosa280) | Terminada (AT y UT verdes) |
-| **HU-04** | Ganar / Perder partida | `features/HU-04_fin_de_partida.feature` | *Por definir* | *Por definir* | Pendiente |
+| **HU-04** | Ganar partida al adivinar todas las letras | `features/HU-04_fin_de_partida.feature` | `tests/Ahorcado.test.ts` (victoria y triangulación) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
 
 ---
 
