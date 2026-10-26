@@ -9,10 +9,10 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 
 | Integrante | GitHub Username | Email en Git | Commits RED iniciados |
 |------------|-----------------|--------------|-----------------------|
-| Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 2 (completados con GREEN) |
+| Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 5 (HU-01 y HU-04, completados con GREEN) |
 | Isabella Andriollo | isabellaand | isabellaandriollo30@gmail.com | 3 (HU-02, completados con GREEN) |
 | Luis Sosa | lusosa280 | luis.ant.sosa@gmail.com | 3 (HU-03, completados con GREEN) |
-| Chiara Del Po | chiaradelpo03 | chiaradelpo@gmail.com | 0 |
+| Chiara Del Po | chiaradelpo03 | chiaradelpopolo@hotmail.com | 0 |
 
 ---
 
@@ -31,7 +31,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | **HU-01** | Mostrar guiones según la palabra secreta | `features/HU-01_palabra_oculta.feature` | `src/domain/Ahorcado.test.ts` (enmascarado inicial) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
 | **HU-02** | Arriesgar letra acertada | `features/HU-02_arriesgar_letra_acertada.feature` | `tests/Ahorcado.test.ts` (letra acertada) | Isabella Andriollo (isabellaand) | Terminada (AT y UT verdes) |
 | **HU-03** | Arriesgar letra errónea y descontar intentos | `features/HU-03_arriesgar_letra_incorrecta.feature` | `tests/Ahorcado.test.ts` (descontar intentos y triangulación) | Luis Sosa (lusosa280) | Terminada (AT y UT verdes) |
-| **HU-04** | Ganar / Perder partida | `features/HU-04_fin_de_partida.feature` | *Por definir* | *Por definir* | Pendiente |
+| **HU-04** | Ganar partida al adivinar todas las letras | `features/HU-04_fin_de_partida.feature` | `tests/Ahorcado.test.ts` (victoria y triangulación) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
 
 ---
 
@@ -55,9 +55,20 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 - **Triangulación rigurosa y Fake It**:
   1. Primer test en `RED:` que expone la nueva necesidad.
   2. Paso a `GREEN:` con la solución mínima o hardcodeada (*Fake It*).
-  3. Segundo test en `RED:` con un caso distinto que invalida la solución fake (triangulación real).
+  3. Segundo test en `RED:` con un caso distinto que invalida la solución fake (triangulación real contradiciendo el fake con el caso opuesto).
   4. Paso a `GREEN:` generalizando la lógica de dominio.
   5. Opcional: `REFACTOR:` si requiere limpieza de diseño.
+- **El RED debe fallar en el assert (Stubs iniciales obligatorios)**:
+  - El test en fase RED debe fallar específicamente en la aserción (`AssertionError` en el `expect`), y no por error de compilación o runtime (`TypeError: ... is not a function`).
+  - Cuando un test invoque un método nuevo que aún no existe, se debe incluir en el **mismo commit del RED** un *stub* en la clase de dominio con el comportamiento neutro o por defecto (ej. `return 6` para intentos restantes iniciales o `return false` para verificar victoria), forzando el fallo legítimo en el assert.
 - **Higiene de Commits**:
   - Un test nuevo **nunca** se clasifica como `REFACTOR:`, sino siempre como `RED:`. Los refactors solo reorganizan código existente sin alterar pruebas ni comportamiento.
+- **Flujo de Integración Continua (CI/CD) y Merge por PR**:
+  - Toda HU terminada debe integrarse a `main` mediante un Pull Request con el pipeline de 6 etapas en verde.
+  - Ninguna rama de feature debe alojar commits de la siguiente HU; el inicio de una nueva HU (commit `RED: [HU-XX]`) debe comenzar en una rama propia una vez integrada la anterior.
+  - Cada merge en `main` dispara automáticamente la etapa de deploy a GitHub Pages, garantizando entrega continua en producción.
+- **Próxima rotación de integrantes**:
+  - Tomás (5 REDs), Isabella (3 REDs) y Luis (3 REDs) ya cumplieron con la consigna de al menos 3 commits RED propios.
+  - La autoría de los tests `RED:` de la próxima HU (HU-05) estará a cargo de **Chiara Del Po** para completar la rotación requerida por la cátedra.
+
 

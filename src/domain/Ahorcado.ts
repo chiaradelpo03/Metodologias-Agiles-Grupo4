@@ -25,5 +25,9 @@ export class Ahorcado {
   obtenerIntentosRestantes(): number {
     return this.intentosRestantes;
   }
+
+  estaGanado(): boolean {
+    return Array.from(this.palabraSecreta).every(letra => this.letrasAdivinadas.has(letra));
+  }
 }
 

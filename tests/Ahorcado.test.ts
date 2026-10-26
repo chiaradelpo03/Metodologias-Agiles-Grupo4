@@ -33,6 +33,25 @@ describe('Ahorcado', () => {
 
     expect(juego.obtenerIntentosRestantes()).toBe(6);
   });
+
+  it('indica que la partida está ganada cuando se adivinan todas las letras', () => {
+    const juego = new Ahorcado('SOL');
+
+    juego.adivinar('S');
+    juego.adivinar('O');
+    juego.adivinar('L');
+
+    expect(juego.estaGanado()).toBe(true);
+  });
+
+  it('no considera ganada la partida si aún quedan letras por adivinar', () => {
+    const juego = new Ahorcado('SOL');
+
+    juego.adivinar('S');
+
+    expect(juego.estaGanado()).toBe(false);
+  });
 });
+
 
 
