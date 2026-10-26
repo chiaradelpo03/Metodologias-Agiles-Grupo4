@@ -12,7 +12,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 5 (HU-01 y HU-04, completados con GREEN) |
 | Isabella Andriollo | isabellaand | isabellaandriollo30@gmail.com | 3 (HU-02, completados con GREEN) |
 | Luis Sosa | lusosa280 | luis.ant.sosa@gmail.com | 3 (HU-03, completados con GREEN) |
-| Chiara Del Po | chiaradelpo03 | chiaradelpopolo@hotmail.com | 0 |
+| Chiara Del Po | chiaradelpo03 | chiaradelpopolo@hotmail.com | 3 (HU-05, completados con GREEN) |
 
 ---
 
@@ -32,6 +32,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | **HU-02** | Arriesgar letra acertada | `features/HU-02_arriesgar_letra_acertada.feature` | `tests/Ahorcado.test.ts` (letra acertada) | Isabella Andriollo (isabellaand) | Terminada (AT y UT verdes) |
 | **HU-03** | Arriesgar letra errónea y descontar intentos | `features/HU-03_arriesgar_letra_incorrecta.feature` | `tests/Ahorcado.test.ts` (descontar intentos y triangulación) | Luis Sosa (lusosa280) | Terminada (AT y UT verdes) |
 | **HU-04** | Ganar partida al adivinar todas las letras | `features/HU-04_fin_de_partida.feature` | `tests/Ahorcado.test.ts` (victoria y triangulación) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
+| **HU-05** | Perder partida al agotar los 6 intentos | `features/HU-05_perder_partida.feature` | `tests/Ahorcado.test.ts` (derrota y triangulación) | Chiara Del Po (chiaradelpo03) | Terminada (AT y UT verdes) |
 
 ---
 
@@ -67,8 +68,9 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
   - Toda HU terminada debe integrarse a `main` mediante un Pull Request con el pipeline de 6 etapas en verde.
   - Ninguna rama de feature debe alojar commits de la siguiente HU; el inicio de una nueva HU (commit `RED: [HU-XX]`) debe comenzar en una rama propia una vez integrada la anterior.
   - Cada merge en `main` dispara automáticamente la etapa de deploy a GitHub Pages, garantizando entrega continua en producción.
-- **Próxima rotación de integrantes**:
-  - Tomás (5 REDs), Isabella (3 REDs) y Luis (3 REDs) ya cumplieron con la consigna de al menos 3 commits RED propios.
-  - La autoría de los tests `RED:` de la próxima HU (HU-05) estará a cargo de **Chiara Del Po** para completar la rotación requerida por la cátedra.
+- **Cumplimiento total de rotación de integrantes**:
+  - Tomás (5 REDs), Isabella (3 REDs), Luis (3 REDs) y Chiara (3 REDs en HU-05) cumplieron con la consigna de al menos 3 commits RED propios.
+  - El equipo completó el 100% de la rotación requerida por la cátedra para la aprobación del TP.
+
 
 
