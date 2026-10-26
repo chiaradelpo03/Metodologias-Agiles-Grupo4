@@ -17,4 +17,22 @@ describe('Ahorcado', () => {
 
     expect(juego.obtenerPalabraEnmascarada()).toBe('_ _ R R _');
   });
+
+  it('descuenta un intento al arriesgar una letra que no pertenece a la palabra', () => {
+    const juego = new Ahorcado('GATO');
+
+    juego.adivinar('Z');
+
+    expect(juego.obtenerIntentosRestantes()).toBe(5);
+  });
+
+  it('no descuenta intentos si la letra arriesgada pertenece a la palabra', () => {
+    const juego = new Ahorcado('GATO');
+
+    juego.adivinar('A');
+
+    expect(juego.obtenerIntentosRestantes()).toBe(6);
+  });
 });
+
+

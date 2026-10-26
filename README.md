@@ -7,8 +7,8 @@ Aplicación web del juego del Ahorcado construida siguiendo las prácticas técn
 ## 👥 Integrantes del Grupo
 - Tomás Gigli (GitHub: `@tomiingm`)
 - Isabella Andriollo (GitHub: `@isabellaand`)
-- Integrante 3 (GitHub: `@...`)
-- Integrante 4 (GitHub: `@...`)
+- Luis Sosa (GitHub: `@lusosa280`)
+- Chiara Del Po (GitHub: `@chiaradelpo03`)
 
 ---
 

@@ -8,18 +8,28 @@ function iniciarAplicacion() {
   const juego = new Ahorcado(palabra);
 
   const palabraOcultaEl = document.getElementById('palabra-oculta');
-  if (palabraOcultaEl) {
-    palabraOcultaEl.textContent = juego.obtenerPalabraEnmascarada();
-  }
+  const intentosRestantesEl = document.getElementById('intentos-restantes');
+
+  const actualizarPantalla = () => {
+    if (palabraOcultaEl) {
+      palabraOcultaEl.textContent = juego.obtenerPalabraEnmascarada();
+    }
+    if (intentosRestantesEl) {
+      intentosRestantesEl.textContent = juego.obtenerIntentosRestantes().toString();
+    }
+  };
+
+  actualizarPantalla();
 
   const formulario = document.getElementById('formulario-letra') as HTMLFormElement;
   const inputLetra = document.getElementById('letra') as HTMLInputElement;
 
   formulario.onsubmit = (evento) => {
     evento.preventDefault();
-    juego.adivinar(inputLetra.value);
-    if (palabraOcultaEl) {
-      palabraOcultaEl.textContent = juego.obtenerPalabraEnmascarada();
+    if (inputLetra.value) {
+      juego.adivinar(inputLetra.value);
+      inputLetra.value = '';
+      actualizarPantalla();
     }
   };
 }
