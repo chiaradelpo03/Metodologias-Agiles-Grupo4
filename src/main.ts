@@ -9,6 +9,7 @@ function iniciarAplicacion() {
 
   const palabraOcultaEl = document.getElementById('palabra-oculta');
   const intentosRestantesEl = document.getElementById('intentos-restantes');
+  const estadoJuegoEl = document.getElementById('estado-juego');
 
   const actualizarPantalla = () => {
     if (palabraOcultaEl) {
@@ -16,6 +17,9 @@ function iniciarAplicacion() {
     }
     if (intentosRestantesEl) {
       intentosRestantesEl.textContent = juego.obtenerIntentosRestantes().toString();
+    }
+    if (estadoJuegoEl && juego.estaGanado()) {
+      estadoJuegoEl.textContent = '¡Ganaste!';
     }
   };
 
