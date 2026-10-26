@@ -25,5 +25,9 @@ export class Ahorcado {
   obtenerIntentosRestantes(): number {
     return this.intentosRestantes;
   }
+
+  estaGanado(): boolean {
+    return true;
+  }
 }
 
