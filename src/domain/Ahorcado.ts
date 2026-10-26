@@ -31,7 +31,7 @@ export class Ahorcado {
   }
 
   estaPerdido(): boolean {
-    return true;
+    return this.intentosRestantes === 0;
   }
 }
 
