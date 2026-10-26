@@ -43,6 +43,14 @@ describe('Ahorcado', () => {
 
     expect(juego.estaGanado()).toBe(true);
   });
+
+  it('no considera ganada la partida si aún quedan letras por adivinar', () => {
+    const juego = new Ahorcado('SOL');
+
+    juego.adivinar('S');
+
+    expect(juego.estaGanado()).toBe(false);
+  });
 });
 
 
