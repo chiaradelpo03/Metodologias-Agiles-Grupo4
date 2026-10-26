@@ -29,5 +29,10 @@ export class Ahorcado {
   estaGanado(): boolean {
     return Array.from(this.palabraSecreta).every(letra => this.letrasAdivinadas.has(letra));
   }
+
+  estaPerdido(): boolean {
+    return false;
+  }
 }
+
 

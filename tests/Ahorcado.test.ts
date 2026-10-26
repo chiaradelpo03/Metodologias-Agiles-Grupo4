@@ -51,7 +51,21 @@ describe('Ahorcado', () => {
 
     expect(juego.estaGanado()).toBe(false);
   });
+
+  it('indica que la partida está perdida cuando se agotan los intentos', () => {
+    const juego = new Ahorcado('SOL');
+
+    juego.adivinar('A');
+    juego.adivinar('B');
+    juego.adivinar('C');
+    juego.adivinar('D');
+    juego.adivinar('E');
+    juego.adivinar('F');
+
+    expect(juego.estaPerdido()).toBe(true);
+  });
 });
+
 
 
 
