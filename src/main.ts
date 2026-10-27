@@ -10,6 +10,7 @@ function iniciarAplicacion() {
   const palabraOcultaEl = document.getElementById('palabra-oculta');
   const intentosRestantesEl = document.getElementById('intentos-restantes');
   const estadoJuegoEl = document.getElementById('estado-juego');
+  const botonReiniciar = document.getElementById('btn-reiniciar') as HTMLButtonElement;
 
   const actualizarPantalla = () => {
     if (palabraOcultaEl) {
@@ -23,14 +24,23 @@ function iniciarAplicacion() {
         estadoJuegoEl.textContent = '¡Ganaste!';
       } else if (juego.estaPerdido()) {
         estadoJuegoEl.textContent = '¡Perdiste!';
+      } else {
+        estadoJuegoEl.textContent = '';
       }
     }
+    botonReiniciar.hidden = !juego.estaGanado() && !juego.estaPerdido();
   };
 
   actualizarPantalla();
 
   const formulario = document.getElementById('formulario-letra') as HTMLFormElement;
   const inputLetra = document.getElementById('letra') as HTMLInputElement;
+
+  botonReiniciar.addEventListener('click', () => {
+    juego.reiniciar();
+    inputLetra.value = '';
+    actualizarPantalla();
+  });
 
   formulario.onsubmit = (evento) => {
     evento.preventDefault();

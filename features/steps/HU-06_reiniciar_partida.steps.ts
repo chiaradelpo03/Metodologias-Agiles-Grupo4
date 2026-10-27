@@ -9,14 +9,6 @@ When('hago clic en el botón {string}', async ({ page }, nombre: string) => {
   await boton.click();
 });
 
-Then('la palabra enmascarada debería estar oculta o limpia', async ({ page }) => {
-  const palabra = page.locator('#palabra-oculta');
-
-  await expect.poll(async () => {
-    if (!(await palabra.isVisible())) {
-      return true;
-    }
-
-    return (await palabra.innerText()).trim() === '';
-  }).toBe(true);
+Then('la palabra enmascarada debería volver a mostrar {string}', async ({ page }, mascara: string) => {
+  await expect(page.locator('#palabra-oculta')).toHaveText(mascara);
 });

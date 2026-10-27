@@ -15,4 +15,4 @@ Característica: Reiniciar la partida
     Y arriesgo la letra "P"
     Cuando hago clic en el botón "Jugar de nuevo"
     Entonces debería ver que me quedan 6 intentos
-    Y la palabra enmascarada debería estar oculta o limpia
+    Y la palabra enmascarada debería volver a mostrar "_ _ _"
