@@ -70,5 +70,5 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
   - Ninguna rama de feature debe alojar commits de la siguiente HU; el inicio de una nueva HU (commit `RED: [HU-XX]`) debe comenzar en una rama propia una vez integrada la anterior.
   - Cada merge en `main` dispara automáticamente la etapa de deploy a GitHub Pages, garantizando entrega continua en producción.
 - **Cumplimiento total de rotación de integrantes**:
-  - Tomás (5 REDs), Isabella (6 REDs), Luis (3 REDs) y Chiara (3 REDs en HU-05) cumplieron con la consigna de al menos 3 commits RED propios.
+  - Tomás (5 REDs), Isabella (4 REDs), Luis (3 REDs) y Chiara (3 REDs en HU-05) cumplieron con la consigna de al menos 3 commits RED propios.
   - El equipo completó el 100% de la rotación requerida por la cátedra para la aprobación del TP.
