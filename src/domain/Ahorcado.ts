@@ -28,6 +28,7 @@ export class Ahorcado {
 
   reiniciar(): void {
     this.intentosRestantes = 6;
+    this.letrasAdivinadas.clear();
   }
 
   estaGanado(): boolean {
