@@ -34,6 +34,24 @@ describe('Ahorcado', () => {
     expect(juego.obtenerIntentosRestantes()).toBe(6);
   });
 
+  it('reinicia los intentos restantes a 6', () => {
+    const juego = new Ahorcado('GATO');
+
+    juego.adivinar('Z');
+    juego.reiniciar();
+
+    expect(juego.obtenerIntentosRestantes()).toBe(6);
+  });
+
+  it('limpia las letras adivinadas al reiniciar', () => {
+    const juego = new Ahorcado('GATO');
+
+    juego.adivinar('A');
+    juego.reiniciar();
+
+    expect(juego.obtenerPalabraEnmascarada()).toBe('_ _ _ _');
+  });
+
   it('indica que la partida está ganada cuando se adivinan todas las letras', () => {
     const juego = new Ahorcado('SOL');
 
@@ -73,8 +91,6 @@ describe('Ahorcado', () => {
     expect(juego.estaPerdido()).toBe(false);
   });
 });
-
-
 
 
 

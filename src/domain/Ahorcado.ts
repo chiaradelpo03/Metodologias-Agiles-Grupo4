@@ -26,6 +26,11 @@ export class Ahorcado {
     return this.intentosRestantes;
   }
 
+  reiniciar(): void {
+    this.intentosRestantes = 6;
+    this.letrasAdivinadas.clear();
+  }
+
   estaGanado(): boolean {
     return Array.from(this.palabraSecreta).every(letra => this.letrasAdivinadas.has(letra));
   }
@@ -34,5 +39,3 @@ export class Ahorcado {
     return this.intentosRestantes === 0;
   }
 }
-
-
