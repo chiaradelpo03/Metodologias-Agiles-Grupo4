@@ -10,7 +10,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | Integrante | GitHub Username | Email en Git | Commits RED iniciados |
 |------------|-----------------|--------------|-----------------------|
 | Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 5 (HU-01 y HU-04, completados con GREEN) |
-| Isabella Andriollo | isabellaand | isabellaandriollo30@gmail.com | 3 (HU-02, completados con GREEN) |
+| Isabella Andriollo | isabellaand | isabellaandriollo30@gmail.com | 4 (HU-02 y HU-06, completados con GREEN) |
 | Luis Sosa | lusosa280 | luis.ant.sosa@gmail.com | 3 (HU-03, completados con GREEN) |
 | Chiara Del Po | chiaradelpo03 | chiaradelpopolo@hotmail.com | 3 (HU-05, completados con GREEN) |
 
@@ -33,6 +33,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | **HU-03** | Arriesgar letra errónea y descontar intentos | `features/HU-03_arriesgar_letra_incorrecta.feature` | `tests/Ahorcado.test.ts` (descontar intentos y triangulación) | Luis Sosa (lusosa280) | Terminada (AT y UT verdes) |
 | **HU-04** | Ganar partida al adivinar todas las letras | `features/HU-04_fin_de_partida.feature` | `tests/Ahorcado.test.ts` (victoria y triangulación) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
 | **HU-05** | Perder partida al agotar los 6 intentos | `features/HU-05_perder_partida.feature` | `tests/Ahorcado.test.ts` (derrota y triangulación) | Chiara Del Po (chiaradelpo03) | Terminada (AT y UT verdes) |
+| **HU-06** | Reiniciar partida con botón "Jugar de nuevo" | `features/HU-06_reiniciar_partida.feature` | `tests/Ahorcado.test.ts (reiniciar intentos, limpiar palabra y triangulación)` | Isabella Andriollo (isabellaand) | Terminada (AT y UT verdes) |
 
 ---
 
@@ -69,8 +70,5 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
   - Ninguna rama de feature debe alojar commits de la siguiente HU; el inicio de una nueva HU (commit `RED: [HU-XX]`) debe comenzar en una rama propia una vez integrada la anterior.
   - Cada merge en `main` dispara automáticamente la etapa de deploy a GitHub Pages, garantizando entrega continua en producción.
 - **Cumplimiento total de rotación de integrantes**:
-  - Tomás (5 REDs), Isabella (3 REDs), Luis (3 REDs) y Chiara (3 REDs en HU-05) cumplieron con la consigna de al menos 3 commits RED propios.
+  - Tomás (5 REDs), Isabella (6 REDs), Luis (3 REDs) y Chiara (3 REDs en HU-05) cumplieron con la consigna de al menos 3 commits RED propios.
   - El equipo completó el 100% de la rotación requerida por la cátedra para la aprobación del TP.
-
-
-
