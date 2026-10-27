@@ -90,6 +90,15 @@ describe('Ahorcado', () => {
 
     expect(juego.estaPerdido()).toBe(false);
   });
+
+  it('no descuenta intentos si se arriesga nuevamente una letra incorrecta ya ingresada', () => {
+    const juego = new Ahorcado('GATO');
+
+    juego.adivinar('Z');
+    juego.adivinar('Z');
+
+    expect(juego.obtenerIntentosRestantes()).toBe(5);
+  });
 });
 
 
