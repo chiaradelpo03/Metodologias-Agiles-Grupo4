@@ -12,7 +12,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 5 (HU-01 y HU-04, completados con GREEN) |
 | Isabella Andriollo | isabellaand | isabellaandriollo30@gmail.com | 4 (HU-02 y HU-06, completados con GREEN) |
 | Luis Sosa | lusosa280 | luis.ant.sosa@gmail.com | 3 (HU-03, completados con GREEN) |
-| Chiara Del Po | chiaradelpo03 | chiaradelpopolo@hotmail.com | 3 (HU-05, completados con GREEN) |
+| Chiara Del Po | chiaradelpo03 | chiaradelpopolo@hotmail.com | 5 (HU-05 y HU-07, completados con GREEN) |
 
 ---
 
@@ -34,6 +34,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | **HU-04** | Ganar partida al adivinar todas las letras | `features/HU-04_fin_de_partida.feature` | `tests/Ahorcado.test.ts` (victoria y triangulación) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
 | **HU-05** | Perder partida al agotar los 6 intentos | `features/HU-05_perder_partida.feature` | `tests/Ahorcado.test.ts` (derrota y triangulación) | Chiara Del Po (chiaradelpo03) | Terminada (AT y UT verdes) |
 | **HU-06** | Reiniciar partida con botón "Jugar de nuevo" | `features/HU-06_reiniciar_partida.feature` | `tests/Ahorcado.test.ts (reiniciar intentos, limpiar palabra y triangulación)` | Isabella Andriollo (isabellaand) | Terminada (AT y UT verdes) |
+| **HU-07** | No penalizar letras repetidas | `features/HU-07_no_penalizar_letras_repetidas.feature` | `tests/Ahorcado.test.ts` (letra repetida y triangulación) | Chiara Del Po (chiaradelpo03) | Terminada (AT y UT verdes) |
 
 ---
 
@@ -70,5 +71,8 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
   - Ninguna rama de feature debe alojar commits de la siguiente HU; el inicio de una nueva HU (commit `RED: [HU-XX]`) debe comenzar en una rama propia una vez integrada la anterior.
   - Cada merge en `main` dispara automáticamente la etapa de deploy a GitHub Pages, garantizando entrega continua en producción.
 - **Cumplimiento total de rotación de integrantes**:
-  - Tomás (5 REDs), Isabella (4 REDs), Luis (3 REDs) y Chiara (3 REDs en HU-05) cumplieron con la consigna de al menos 3 commits RED propios.
+  - Tomás (5 REDs), Isabella (4 REDs), Luis (3 REDs) y Chiara (5 REDs en HU-05 y HU-07) cumplieron con creces la consigna de al menos 3 commits RED propios.
   - El equipo completó el 100% de la rotación requerida por la cátedra para la aprobación del TP.
+- **Devolución Docente HU-05 y Preparación para la Defensa (Clase 26/10 - main `012edf6`)**:
+  - La cátedra destacó positivamente el cumplimiento estricto del stub en RED (`estaPerdido() { return false; }`), la triangulación canónica (*fake it* -> caso opuesto -> generalización) y el flujo de trabajo por PR documentado.
+  - Recomendación para la defensa: justificar y explicar la ejecución en rojo de cada test previo a su commit RED y solución mínima.

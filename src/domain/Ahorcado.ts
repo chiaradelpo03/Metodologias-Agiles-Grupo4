@@ -16,6 +16,9 @@ export class Ahorcado {
 
   adivinar(letra: string): void {
     const letraMayuscula = letra.toUpperCase();
+    if (this.letrasAdivinadas.has(letraMayuscula)) {
+      return;
+    }
     if (!this.palabraSecreta.includes(letraMayuscula)) {
       this.intentosRestantes--;
     }
