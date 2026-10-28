@@ -108,6 +108,14 @@ describe('Ahorcado', () => {
 
     expect(juego.obtenerIntentosRestantes()).toBe(5);
   });
+
+  it('devuelve las letras arriesgadas por el jugador', () => {
+    const juego = new Ahorcado('GATO');
+
+    juego.adivinar('A');
+
+    expect(juego.obtenerLetrasArriesgadas()).toEqual(['A']);
+  });
 });
 
 

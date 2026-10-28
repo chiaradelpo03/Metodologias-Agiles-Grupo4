@@ -41,4 +41,8 @@ export class Ahorcado {
   estaPerdido(): boolean {
     return this.intentosRestantes === 0;
   }
+
+  obtenerLetrasArriesgadas(): string[] {
+    return [];
+  }
 }
