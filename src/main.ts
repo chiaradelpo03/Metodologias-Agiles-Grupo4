@@ -9,6 +9,7 @@ function iniciarAplicacion() {
 
   const palabraOcultaEl = document.getElementById('palabra-oculta');
   const intentosRestantesEl = document.getElementById('intentos-restantes');
+  const letrasArriesgadasEl = document.getElementById('letras-arriesgadas');
   const estadoJuegoEl = document.getElementById('estado-juego');
   const botonReiniciar = document.getElementById('btn-reiniciar') as HTMLButtonElement;
 
@@ -18,6 +19,9 @@ function iniciarAplicacion() {
     }
     if (intentosRestantesEl) {
       intentosRestantesEl.textContent = juego.obtenerIntentosRestantes().toString();
+    }
+    if (letrasArriesgadasEl) {
+      letrasArriesgadasEl.textContent = juego.obtenerLetrasArriesgadas().join(', ');
     }
     if (estadoJuegoEl) {
       if (juego.estaGanado()) {
