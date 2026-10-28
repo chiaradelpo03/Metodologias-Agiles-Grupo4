@@ -43,6 +43,6 @@ export class Ahorcado {
   }
 
   obtenerLetrasArriesgadas(): string[] {
-    return ['A'];
+    return Array.from(this.letrasAdivinadas);
   }
 }
