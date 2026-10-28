@@ -116,6 +116,15 @@ describe('Ahorcado', () => {
 
     expect(juego.obtenerLetrasArriesgadas()).toEqual(['A']);
   });
+
+  it('registra múltiples letras arriesgadas distintas en el orden ingresado', () => {
+    const juego = new Ahorcado('GATO');
+
+    juego.adivinar('A');
+    juego.adivinar('Z');
+
+    expect(juego.obtenerLetrasArriesgadas()).toEqual(['A', 'Z']);
+  });
 });
 
 
