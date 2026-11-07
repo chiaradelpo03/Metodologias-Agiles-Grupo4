@@ -125,6 +125,12 @@ describe('Ahorcado', () => {
 
     expect(juego.obtenerLetrasArriesgadas()).toEqual(['A', 'Z']);
   });
+
+  it('inicia con la primera palabra de la lista predefinida si no se especifica palabra', () => {
+    const juego = new Ahorcado();
+
+    expect(juego.obtenerPalabraEnmascarada()).toBe('_ _ _ _');
+  });
 });
 
 

@@ -1,10 +1,11 @@
 export class Ahorcado {
+  private static readonly PALABRAS_POR_DEFECTO = ['GATO', 'SOL', 'PERRO'];
   private palabraSecreta: string;
   private letrasAdivinadas = new Set<string>();
   private intentosRestantes: number;
 
-  constructor(palabra: string, intentosMaximos = 6) {
-    this.palabraSecreta = palabra.trim().toUpperCase();
+  constructor(palabra?: string, intentosMaximos = 6) {
+    this.palabraSecreta = (palabra || 'AHORCADO').trim().toUpperCase();
     this.intentosRestantes = intentosMaximos;
   }
 
