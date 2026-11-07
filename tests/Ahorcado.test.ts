@@ -131,6 +131,14 @@ describe('Ahorcado', () => {
 
     expect(juego.obtenerPalabraEnmascarada()).toBe('_ _ _ _');
   });
+
+  it('cambia a la siguiente palabra de la lista al reiniciar', () => {
+    const juego = new Ahorcado();
+
+    juego.reiniciar();
+
+    expect(juego.obtenerPalabraEnmascarada()).toBe('_ _ _');
+  });
 });
 
 
