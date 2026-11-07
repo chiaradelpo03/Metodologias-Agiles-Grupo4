@@ -3,9 +3,9 @@ import { Ahorcado } from './domain/Ahorcado';
 
 function iniciarAplicacion() {
   const urlParams = new URLSearchParams(window.location.search);
-  const palabra = urlParams.get('palabra') || 'AHORCADO';
+  const palabra = urlParams.get('palabra');
 
-  const juego = new Ahorcado(palabra);
+  const juego = palabra ? new Ahorcado(palabra) : new Ahorcado();
 
   const palabraOcultaEl = document.getElementById('palabra-oculta');
   const intentosRestantesEl = document.getElementById('intentos-restantes');
