@@ -5,7 +5,7 @@ export class Ahorcado {
   private intentosRestantes: number;
 
   constructor(palabra?: string, intentosMaximos = 6) {
-    this.palabraSecreta = (palabra || 'AHORCADO').trim().toUpperCase();
+    this.palabraSecreta = (palabra || 'GATO').trim().toUpperCase();
     this.intentosRestantes = intentosMaximos;
   }
 
