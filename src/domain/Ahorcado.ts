@@ -1,10 +1,18 @@
 export class Ahorcado {
+  private static readonly PALABRAS_POR_DEFECTO = ['GATO', 'SOL', 'PERRO'];
   private palabraSecreta: string;
   private letrasAdivinadas = new Set<string>();
   private intentosRestantes: number;
+  private indicePalabra = 0;
+  private usaListaPredefinida = false;
 
-  constructor(palabra: string, intentosMaximos = 6) {
-    this.palabraSecreta = palabra.trim().toUpperCase();
+  constructor(palabra?: string, intentosMaximos = 6) {
+    if (palabra) {
+      this.palabraSecreta = palabra.trim().toUpperCase();
+    } else {
+      this.usaListaPredefinida = true;
+      this.palabraSecreta = Ahorcado.PALABRAS_POR_DEFECTO[0];
+    }
     this.intentosRestantes = intentosMaximos;
   }
 
@@ -32,6 +40,10 @@ export class Ahorcado {
   reiniciar(): void {
     this.intentosRestantes = 6;
     this.letrasAdivinadas.clear();
+    if (this.usaListaPredefinida) {
+      this.indicePalabra = (this.indicePalabra + 1) % Ahorcado.PALABRAS_POR_DEFECTO.length;
+      this.palabraSecreta = Ahorcado.PALABRAS_POR_DEFECTO[this.indicePalabra];
+    }
   }
 
   estaGanado(): boolean {

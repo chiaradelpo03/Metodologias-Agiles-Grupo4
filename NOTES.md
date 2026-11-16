@@ -36,6 +36,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | **HU-06** | Reiniciar partida con botón "Jugar de nuevo" | `features/HU-06_reiniciar_partida.feature` | `tests/Ahorcado.test.ts (reiniciar intentos, limpiar palabra y triangulación)` | Isabella Andriollo (isabellaand) | Terminada (AT y UT verdes) |
 | **HU-07** | No penalizar letras repetidas | `features/HU-07_no_penalizar_letras_repetidas.feature` | `tests/Ahorcado.test.ts` (letra repetida y triangulación) | Chiara Del Po (chiaradelpo03) | Terminada (AT y UT verdes) |
 | **HU-08** | Mostrar lista de letras ya arriesgadas | `features/HU-08_mostrar_letras_arriesgadas.feature` | `tests/Ahorcado.test.ts` (letras arriesgadas y triangulación) | Luis Sosa (lusosa280) | Terminada (AT y UT verdes) |
+| **HU-09** | Palabras múltiples en el juego | `features/HU-09_palabras_multiples.feature` | `tests/Ahorcado.test.ts` (palabra por defecto y rotación al reiniciar) | Tomás Gigli (tomiingm) | Terminada (AT y UT verdes) |
 
 ---
 
