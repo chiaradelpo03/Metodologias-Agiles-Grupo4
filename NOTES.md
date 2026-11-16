@@ -18,7 +18,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 
 ## 2. Enlaces del Proyecto
 - **Repositorio**: [GitHub Repository](https://github.com/chiaradelpo03/Metodologias-Agiles-Grupo4)
-- **Tablero / Story Map**: *[Pegar aquí el link a GitHub Projects / Trello]*
+- **Tablero / Story Map**: [https://miro.com/app/board/uXjVIu0ZB3U=/]
 - **Aplicación en Producción**: [https://chiaradelpo03.github.io/Metodologias-Agiles-Grupo4/](https://chiaradelpo03.github.io/Metodologias-Agiles-Grupo4/)
 - **Dashboard de Calidad (SonarQube Cloud)**: [https://sonarcloud.io/project/overview?id=lusosa280_Metodologias-Agiles-Grupo4](https://sonarcloud.io/project/overview?id=lusosa280_Metodologias-Agiles-Grupo4)
 
