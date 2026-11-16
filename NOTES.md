@@ -12,7 +12,7 @@ Este documento registra la trazabilidad entre **Historias de Usuario**, **Criter
 | Tomás Gigli | tomiingm | tomasgigli@yahoo.com.ar | 5 (HU-01 y HU-04, completados con GREEN) |
 | Isabella Andriollo | isabellaand | isabellaandriollo30@gmail.com | 4 (HU-02 y HU-06, completados con GREEN) |
 | Luis Sosa | lusosa280 | luis.ant.sosa@gmail.com | 5 (HU-03 y HU-08, completados con GREEN) |
-| Chiara Del Po | chiaradelpo03 | chiaradelpopolo@hotmail.com | 5 (HU-05 y HU-07, completados con GREEN) |
+| Chiara Del Popolo | chiaradelpo03 | chiaradelpopolo@hotmail.com | 5 (HU-05 y HU-07, completados con GREEN) |
 
 ---
 
